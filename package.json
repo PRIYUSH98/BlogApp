@@ -1,0 +1,35 @@
+{
+  "name": "udemy-nodejs-angular2",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www",
+    "build": "del-cli public/js/app && webpack --config webpack.config.dev.js --progress --profile --watch",
+    "build:prod": "del-cli public/js/app && ngc -p tsconfig.aot.json && ngc -p tsconfig.aot.json && webpack --config webpack.config.prod.js --progress --profile --bail && del-cli 'assets/app/**/*.js' 'assets/app/**/*.ngsummary.json' 'assets/app/**/*.ngstyle.*'"
+  },
+  "dependencies": {
+    "body-parser": "~1.15.2",
+    "cookie-parser": "~1.4.3",
+    "core-js": "^2.4.1",
+    "css": "^2.2.4",
+    "debug": "~2.2.0",
+    "ejs": "^2.6.1",
+    "express": "~4.14.0",
+    "firebase": "^5.9.4",
+    "hbs": "~3.1.0",
+    "morgan": "~1.6.1",
+    "reflect-metadata": "^0.1.3",
+    "serve-favicon": "~2.3.0",
+    "zone.js": "^0.8.5"
+  },
+  "devDependencies": {
+    "@types/node": "^6.0.45",
+    "del-cli": "^0.2.0",
+    "html-loader": "^0.4.4",
+    "raw-loader": "^0.5.1",
+    "ts-loader": "^2.0.3",
+    "typescript": "^2.4.2",
+    "webpack": "^2.2.1",
+    "webpack-merge": "^4.1.0"
+  }
+}
