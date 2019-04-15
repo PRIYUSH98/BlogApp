@@ -1,0 +1,39 @@
+<script src="https://www.gstatic.com/firebasejs/5.9.3/firebase.js"></script>
+
+
+<% include partials/header1 %>
+
+<div class="container">
+           <header class="jumbotron">
+               <div class="container">
+              <H1>Welcome !!</H1>
+              <p>Handpicked Natural Beautiful Places from all over India</p>
+                <p><a class="btn-primary btn-lg" href="/newblog">Creare New Blog</a></p>
+              </div>
+            </header>
+         
+           
+            <div class="row text-center" style="display:flex; flex-wrap: wrap;">
+                    <% for(var i=0;i<name.length;i++){ %>
+                        <div class="col-md-3 col-sm-6">
+                   <div class="thumbnail">
+                        <img src="<%= image[i] %>">
+                        <div class="caption">
+                            <h4><%= name[i] %></h4>
+                            
+                        </div>
+                        <div>
+                         <a href="/blogs/<%=i%>">More Info</a>
+
+                        </div>
+                   </div>
+                     
+                    
+                </div>
+                <% } %>
+            </div>
+ </div>
+ 
+ <% include partials/footer %>
+
+
